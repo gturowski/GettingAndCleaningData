@@ -16,3 +16,34 @@ run_analysis.R
 * Read X_test.txt, y_test.txt and subject_test.txt from the "UCI HAR Dataset/test" folder and store them in testDS, test_activities and test_subject variables respectively.
 * Read X_train.txt, y_train.txt and subject_train.txt from the "UCI HAR Dataset/train" folder and store them in trainDS, train_activities and train_subject variables respectively.
 * Read activity_labels.txt from the "UCI HAR Dataset" folder and store it in act_label variable.
+* Translate activity numbers into descriptions. Because test_activities and train_activities have different number of rows than act_label which is a data frame with activity full names, an additional column needs to introduced (test_activities$sorting and train_activities$sorting) that will allow retaining the original row order. Initially this column has the same values as the rownames.
+* Merge test_activities and train_activities with act_label by V1 column. As a result we are granted with test_merge and train_merge data frames where IDs are translated into full descriptions.
+* Bring back old row order – we need the original order to merge this data frame with testDS and trainDS. Sorting column needs to be numeric for the sorting to be correct. Order by sorting columns.
+* Set correct row names - they should be the same as the sorting column values.
+* Remove sorting column - it was necessary only to solve the sorting problem.
+* Add activity column to get test and train data frames with all data. testDS1 and trainDS1 are original testDS and trainDS tables respectively with activity column included.
+* Add subject column to get test and train data frames with all data. testDS2 and trainDS2 are original testDS1 and trainDS1 tables respectively with subject column included.
+* Merge testDS2 and trainDS2 data frames to get DS dataset with full data.
+* Read features.txt from the "UCI HAR Dataset" folder and store it in features variable.
+* Subset features to get only variables with mean and standard deviation, store the result in f1 variable.
+* Use f1 to create final_data data frame 
+feature_hlp<-select_features[,1]+2
+V1<-feature_hlp   
+final_data<-DS[,V1]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
