@@ -3,7 +3,7 @@ ___
 1.	Download the file and put it into your working directory
 ---
 ###### Url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-download.file(Url,destfile="./DS.zip")
+###### download.file(Url,destfile="./DS.zip")
 ___
 2.	Unzip the file
 ---
