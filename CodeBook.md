@@ -32,7 +32,7 @@ Script code can be found inside run_analysis.R file.
 * Label the data inside the final_data data frame with descriptive variable names: t=time, f=frequency, Acc=Accelerometer, Gyro=Gyroscope, Mag=Magnitude, BodyBody=Body.
 * Create a second, independent tidy data set called TidyData with the average of each measurement for each activity and each subject and write it to tidydata.txt file.
 
-Dimentions of all data frames mentioned above are as follows:
+Dimentions of variables mentioned above are as follows:
 * testDS - 2947x561
 * trainDS - 7352x561
 * act_label - 6x2
