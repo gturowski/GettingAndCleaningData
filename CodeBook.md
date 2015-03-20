@@ -26,23 +26,8 @@ run_analysis.R
 * Merge testDS2 and trainDS2 data frames to get DS dataset with full data.
 * Read features.txt from the "UCI HAR Dataset" folder and store it in features variable.
 * Subset features to get only variables with mean and standard deviation, store the result in select_features variable.
-* Use select_features to create final_data data frame 
-feature_hlp<-select_features[,1]+2
-final_data<-DS[,V1]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* Use select_features to create final_data data frame. Subject and Activity columns must be considere that's why 2 must be added to the result which is stored in feature_hlp variable. final_data variable is crated based on feature_hlp.
+* Add subject and activity columns to the final data data frame that was previously filtered by feature_hlp variable.
+* Set column names using select_features variable, create additional variables called c_names and col to accomplish that.
+* Label the data inside the final_data data frame with descriptive variable names: t=time, f=frequency, Acc=Accelerometer, Gyro=Gyroscope, Mag=Magnitude, BodyBody=Body.
+* Create a second, independent tidy data set called TidyData and write it to tidydata.txt file
