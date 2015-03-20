@@ -10,7 +10,7 @@
 
 #####The script performs a number of operations to collect, work with, and clean the data set. Result of this script is a tidy data that can be used for later analysis.
 ---
-run_analysis.R
+Script code can be found inside run_analysis.R file.
 
 * Download the file with the data for the project and put it into working directory, unzip it.
 * Read X_test.txt, y_test.txt and subject_test.txt from the "UCI HAR Dataset/test" folder and store them in testDS, test_activities and test_subject variables respectively.
