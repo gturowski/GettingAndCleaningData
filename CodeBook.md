@@ -30,4 +30,4 @@ run_analysis.R
 * Add subject and activity columns to the final data data frame that was previously filtered by feature_hlp variable.
 * Set column names using select_features variable, create additional variables called c_names and col to accomplish that.
 * Label the data inside the final_data data frame with descriptive variable names: t=time, f=frequency, Acc=Accelerometer, Gyro=Gyroscope, Mag=Magnitude, BodyBody=Body.
-* Create a second, independent tidy data set called TidyData and write it to tidydata.txt file
+* Create a second, independent tidy data set called TidyData with the average of each measurement for each activity and each subject and write it to tidydata.txt file.
