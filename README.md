@@ -79,7 +79,7 @@ ___
 ___
 8.	Subset features to get only variables with mean and standard deviation
 ---
-###### f1<-features[((grepl("mean()", features$V2))&!(grepl("meanFreq()", features$V2)))|((grepl("std()", features$V2))),]
+###### select_features<-features[((grepl("mean()", features$V2))&!(grepl("meanFreq()", features$V2)))|((grepl("std()", features$V2))),]
 ___
 9.	Display only selected variables
 ---
