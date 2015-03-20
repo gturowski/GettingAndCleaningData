@@ -49,6 +49,6 @@ Dimentions of all data frames mentioned above are as follows:
 * select_features - 66x2
 * final_data - 10299x68
 * TidyData - 180x68
-* 
+
 
 @Created by Grzegorz Turowski
