@@ -31,3 +31,24 @@ run_analysis.R
 * Set column names using select_features variable, create additional variables called c_names and col to accomplish that.
 * Label the data inside the final_data data frame with descriptive variable names: t=time, f=frequency, Acc=Accelerometer, Gyro=Gyroscope, Mag=Magnitude, BodyBody=Body.
 * Create a second, independent tidy data set called TidyData with the average of each measurement for each activity and each subject and write it to tidydata.txt file.
+
+Dimentions of all data frames mentioned above are as follows:
+* testDS - 2947x561
+* trainDS - 7352x561
+* act_label - 6x2
+* test_activities, test_subject - 2947x1
+* train_activities, train_subject - 7352x1
+* test_merge - 2947x2
+* train_merge - 7352x2
+* test_DS1 - 2947x562
+* train_DS1 - 7352x562
+* testDS2 - 2947x563
+* trainDS2 - 7352x563
+* DS - 10299x563
+* features - 561x2
+* select_features - 66x2
+* final_data - 10299x68
+* TidyData - 180x68
+* 
+
+@Created by Grzegorz Turowski
