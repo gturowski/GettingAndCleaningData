@@ -12,18 +12,22 @@ ___
 3.	Read data from files that are going to be used in the assignment
 ---
 Read data from main Datasets
+---
 testDS<- read.table("UCI HAR Dataset/test/X_test.txt")
 trainDS<- read.table("UCI HAR Dataset/train/X_train.txt")
 ---
 Read data from Activity files
+---
 test_activities<- read.table("UCI HAR Dataset/test/y_test.txt")
 train_activities<- read.table("UCI HAR Dataset/train/y_train.txt")
 ---
 Read data from Subject files
+---
 test_subject<- read.table("UCI HAR Dataset/test/subject_test.txt")
 train_subject<- read.table("UCI HAR Dataset/train/subject_train.txt")
 ---
 Read data from additional files
+---
 act_label<-read.table("UCI HAR Dataset/activity_labels.txt")
 ___
 4.	Translate activity numbers to descriptions
@@ -31,25 +35,30 @@ ___
 Because activity tables have different number of rows than act_label table which is a table with activity full names an additional column needs to introduced (column name = sorting) that will allow retaining the original row order. 
 ---
 Initially this column is the same as the rownames.
+---
 test_activities$sorting<- rownames(test_activities)
 train_activities$sorting<- rownames(train_activities)
 ---
 Merging activity table with the labels
+---
 test_merge<-merge(test_activities, act_label, by="V1")
 train_merge<-merge(train_activities, act_label, by="V1")
 ---
 Bringing back old row order – we need the original order to merge this table with the main dataset
 Sorting column needs to be numeric for the sorting to be correct
+---
 test_merge$sorting<-as.numeric(test_merge$sorting)
 train_merge$sorting<-as.numeric(train_merge$sorting)
 test_merge<-test_merge[order(test_merge[2]), ]
 train_merge<-train_merge[order(train_merge[2]), ]
 ---
 Setting correct row names
+---
 rownames(test_merge)<-test_merge$sorting
 rownames(train_merge)<-train_merge$sorting
 ---
 Removing sorting column
+---
 test_merge<-subset(test_merge, select = c(V1,V2))
 train_merge<-subset(train_merge, select = c(V1,V2))
 ___
