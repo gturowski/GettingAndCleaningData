@@ -84,8 +84,7 @@ ___
 9.	Display only selected variables
 ---
 ###### feature_hlp<-select_features[,1]+2
-###### V1<-feature_hlp   
-###### final_data<-DS[,V1]
+###### final_data<-DS[,feature_hlp]
 ___
 10.	Add subject and activity to the final data data frame
 ---
