@@ -1,12 +1,16 @@
-
 # Getting and Cleaning Data
 
 1.	Download the file and put it into your working directory
+---
 Url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(Url,destfile="./DS.zip")
+---
 2.	Unzip the file
+---
 unzip(zipfile="./data/DS.zip")
+---
 3.	Read data from files that are going to be used in the assignment
+---
 Read data from main Datasets
 testDS<- read.table("UCI HAR Dataset/test/X_test.txt")
 trainDS<- read.table("UCI HAR Dataset/train/X_train.txt")
