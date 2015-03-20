@@ -25,10 +25,9 @@ run_analysis.R
 * Add subject column to get test and train data frames with all data. testDS2 and trainDS2 are original testDS1 and trainDS1 tables respectively with subject column included.
 * Merge testDS2 and trainDS2 data frames to get DS dataset with full data.
 * Read features.txt from the "UCI HAR Dataset" folder and store it in features variable.
-* Subset features to get only variables with mean and standard deviation, store the result in f1 variable.
-* Use f1 to create final_data data frame 
+* Subset features to get only variables with mean and standard deviation, store the result in select_features variable.
+* Use select_features to create final_data data frame 
 feature_hlp<-select_features[,1]+2
-V1<-feature_hlp   
 final_data<-DS[,V1]
 
 
